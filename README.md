@@ -32,6 +32,67 @@ for (var i = 0; i< 10; i++){
 
 ## 6. 迭代的方法实现 flatten 函数
 
+## 7. 实现一个 sleep 函数
+
+## 8. 实现(5).add(5).minus(2)的功能
+
+## 9. 将公司 1 到 12 月份的销售额存在一个对象里面
+
+## 10. 要求实现 LazyMan 类，实现以下功能
+
+```JavaScript
+LazyMan('Tony');
+// Hi I am Tony
+
+LazyMan('Tony').sleep(10).eat('lunch');
+// Hi I am Tony
+// 等待了10秒...
+// I am eating lunch
+
+LazyMan('Tony').eat('lunch').sleep(10).eat('dinner');
+// Hi I am Tony
+// I am eating lunch
+// 等待了10秒...
+// I am eating diner
+
+LazyMan('Tony').eat('lunch').eat('dinner').sleepFirst(5).sleep(10).eat('junk food');
+// Hi I am Tony
+// 等待了5秒...
+// I am eating lunch
+// I am eating dinner
+// 等待了10秒...
+// I am eating junk food
+```
+
+## 11. 给定两个数组，写一个方法计算它们的交集
+
+给定 nums1 = [1, 2, 2, 1]，nums2 = [2, 2]，返回 [2, 2]。
+
+## 12. 数组编程题
+
+随机生成一个长度为 10 的整数类型的数组，例如 [2, 10, 3, 4, 5, 11, 10, 11, 20]，将其排列成一个新数组，要求新数组形式如下，例如 [[2, 3, 4, 5], [10, 11], [20]]。
+
+## 13. 如何把一个字符串的大小写取反（大写变小写小写变大写），例如 ’AbC' 变成 'aBc'
+
+## 14. 实现一个字符串匹配算法，从长度为 n 的字符串 S 中，查找是否存在字符串 T，T 的长度是 m，若存在返回所在位置
+
+## 15. 旋转数组
+
+给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+
+示例 1
+
+```JavaScript
+输入: [1, 2, 3, 4, 5, 6, 7] 和 k = 3
+输出: [5, 6, 7, 1, 2, 3, 4]
+解释:
+向右旋转 1 步: [7, 1, 2, 3, 4, 5, 6]
+向右旋转 2 步: [6, 7, 1, 2, 3, 4, 5]
+向右旋转 3 步: [5, 6, 7, 1, 2, 3, 4]
+```
+
+## 16. 打印出 1 - 10000 之间的所有对称数
+
 ## Reference
 
 [1] https://github.com/Advanced-Frontend/Daily-Interview-Question
