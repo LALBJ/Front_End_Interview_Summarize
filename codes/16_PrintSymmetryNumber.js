@@ -13,3 +13,21 @@ for (let i = 1; i < 10; i++){
 }
 
 console.log(result)
+
+const compare = (a, b) => {
+    for (let val of a) {
+        if (Object.prototype.toString.call(val) == '[object Object]') {
+            let find = false
+            for (let valb of b) {
+                if (val == valb) {
+                    find = true
+                }
+            }
+            if (find == false) return false;
+        } else {
+            if (!b.includes(val)) return false;
+        }
+        
+    }
+    return true;
+}

@@ -1,1 +1,1 @@
-console.log('AbcDefGh'.replace(/[a-zA-Z]/g,function(a){ return /[a-z]/.test(a)?a.toUpperCase():a.toLowerCase(); }))
+console.log('AbcDefGh'.replace(/[a-zA-Z]/g, function(a){ return /[a-z]/.test(a)?a.toUpperCase():a.toLowerCase(); }))

@@ -5,14 +5,14 @@ for (var i = 0; i< 10; i++){
     }, 1000, i)
 }
 
-// 2. 
+// 2. let 块作用域
 for (let i = 0; i< 10; i++){
 	setTimeout(() => {
 		console.log(i);
     }, 1000)
 }
 
-// 3.
+// 3. IIFE
 for (var i = 0; i < 10; i++){
     ((i) => {
         setTimeout(() => {

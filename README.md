@@ -93,6 +93,83 @@ LazyMan('Tony').eat('lunch').eat('dinner').sleepFirst(5).sleep(10).eat('junk foo
 
 ## 16. 打印出 1 - 10000 之间的所有对称数
 
+## 17. 移动 0
+
+## 18. 请实现一个 add 函数，满足以下功能
+
+## 19. 在输入框中如何判断输入的是一个正确的网址
+
+```javascript
+add(1); 	  // 1
+add(1)(2);    // 3
+add(1)(2)(3)；// 6
+add(1)(2, 3); // 6
+add(1, 2)(3); // 6
+add(1, 2, 3); // 6
+```
+
+## 20. 实现 convert 方法，把原始 list 转换成树形结构，要求尽可能降低时间复杂度
+
+```javascript
+// 原始 list 如下
+let list =[
+    {id:1,name:'部门A',parentId:0},
+    {id:2,name:'部门B',parentId:0},
+    {id:3,name:'部门C',parentId:1},
+    {id:4,name:'部门D',parentId:1},
+    {id:5,name:'部门E',parentId:2},
+    {id:6,name:'部门F',parentId:3},
+    {id:7,name:'部门G',parentId:2},
+    {id:8,name:'部门H',parentId:4}
+];
+const result = convert(list, ...);
+
+// 转换后的结果如下
+let result = [
+    {
+      id: 1,
+      name: '部门A',
+      parentId: 0,
+      children: [
+        {
+          id: 3,
+          name: '部门C',
+          parentId: 1,
+          children: [
+            {
+              id: 6,
+              name: '部门F',
+              parentId: 3
+            }, {
+              id: 16,
+              name: '部门L',
+              parentId: 3
+            }
+          ]
+        },
+        {
+          id: 4,
+          name: '部门D',
+          parentId: 1,
+          children: [
+            {
+              id: 8,
+              name: '部门H',
+              parentId: 4
+            }
+          ]
+        }
+      ]
+    },
+  ···
+];
+
+```
+
+## 21. 实现模糊搜索结果的关键词高亮显示
+
+## 22. 实现一个深拷贝，并考虑对象相互引用以及 Symbol 拷贝的情况
+
 ## Reference
 
 [1] https://github.com/Advanced-Frontend/Daily-Interview-Question
