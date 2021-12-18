@@ -5,6 +5,7 @@ const deepCopy = (obj, map = new Map()) => {
     return obj;
   }
   const newObj = Array.isArray(obj) ? [] : {};
-  for (let key in newObj) {
+    for (let key in newObj) {
+      
   }
 };
