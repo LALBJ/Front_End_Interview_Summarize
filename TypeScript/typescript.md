@@ -44,6 +44,69 @@ TypeScript 非常适用于大型项目——这是显而易见的，类型系统
 在中小型项目中推行 TypeScript 的最大障碍就是认为使用 TypeScript 需要写额外的代码，降低开发效率。但事实上，由于有[类型推论][]，大部分类型都不需要手动声明了。相反，TypeScript 增强了编辑器（IDE）的功能，包括代码补全、接口提示、跳转到定义、代码重构等，这在很大程度上提高了开发效率。而且 TypeScript 有近百个[编译选项][]，如果你认为类型检查过于严格，那么可以通过修改编译选项来降低类型检查的标准。
 ```
 
+## 2. TS 类型推论是什么
+
+```markdown
+TypeScript 会在没有明确的指定类型的时候推测出一个类型，这就是类型推论。
+
+如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 any 类型而完全不被类型检查
+```
+
+## 3. TS 接口的任意属性和只读属性
+
+````markdown
+## 任意属性
+
+```typescript
+interface Person {
+  name: string;
+  age?: number;
+  [propName: string]: any;
+}
+
+let tom: Person = {
+  name: "Tom",
+  gender: "male",
+};
+```
+
+一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集：
+
+## 只读属性
+
+```typescript
+interface Person {
+  readonly name: string;
+  age?: number;
+  [propName: string]: any;
+}
+
+let tom: Person = {
+  name: "Tom",
+  gender: "male",
+};
+```
+````
+
+## 4. 数组的类型
+
+在 TypeScript 中，数组类型有多种定义方式，比较灵活
+
+````markdown
+1. 类型+方括号法
+   `let fibonacci: number[] = [1, 1, 2, 3, 5];`
+2. 数组泛型
+   `let fibonacci: Array<number> = [1, 1, 2, 3, 5];`
+3. 用接口表示数组
+
+```typescript
+interface NumberArray {
+  [index: number]: number;
+}
+let fibonacci: NumberArray = [1, 1, 2, 3, 5];
+```
+````
+
 ```
 
 ```

@@ -45,8 +45,53 @@ React 组件设计思想？
 
 1. 即使是函数组件，组件命名的首字母也要大写
 2. 如果没有圆括号，return 之后的语句会被忽略
+3. memo 是浅比较，只比较内存地址
 
 ## 1. 什么是纯函数
 
 - Minds its own business. It does not change any objects or variables that existed before it was called.
 - Same inputs, same output. Given the same inputs, a pure function should always return the same result.
+
+## 2. 介绍一下 useState
+
+````markdown
+为什么要使用 useState?
+useState 的出现使得在函数组件中能够使用 usaState。这样当一个函数组件想要维护自己的 state 的时候，就不必转换成 class 组件了。
+useState 的踩坑点：
+
+1. useState 的初始值，只在第一次有效
+
+```jsx
+const Child = memo(({ data }) => {
+  console.log("child render...", data);
+  const [name, setName] = useState(data);
+  return (
+    <div>
+      <div>child</div>
+      <div>
+        {name} --- {data}
+      </div>
+    </div>
+  );
+});
+
+const Hook = () => {
+  console.log("Hook render...");
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState("rose");
+
+  return (
+    <div>
+      <div>{count}</div>
+      <button onClick={() => setCount(count + 1)}>update count </button>
+      <button onClick={() => setName("jack")}>update name </button>
+      <Child data={name} />
+    </div>
+  );
+};
+```
+````
+
+```
+
+```

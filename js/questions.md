@@ -71,3 +71,12 @@ createImg(url).then((value) => {
 });
 ```
 ````
+
+## 23. 判断以下代码返回结果
+
+```javascript
+typeof Boolean(1);
+typeof new Boolean(1);
+```
+
+
